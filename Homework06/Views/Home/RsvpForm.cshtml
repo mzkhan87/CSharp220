@@ -1,0 +1,22 @@
+﻿@model Homework06.Models.SendCard
+
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
+	<title>Invitation-page</title>
+</head>
+
+@{
+	Layout = null;
+}
+@using (Html.BeginForm())
+{
+	@Html.ValidationSummary()
+	<h1>Birthday Card Generator</h1>
+	<h2>Send a Birthday Card</h2>
+	<p>From: @Html.TextBoxFor(t => t.From)</p>
+	<p>To: @Html.TextBoxFor(t => t.To)</p>
+	<p>Message: @Html.TextBoxFor(t => t.Message)</p>
+
+	<input type="submit" class="button" value="send Card" />
+}
